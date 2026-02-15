@@ -6,8 +6,6 @@ const greetings = [
 ];
 
 document.getElementById("btn").addEventListener("click", function () {
-    // Pick a random greeting
     const randomIndex = Math.floor(Math.random() * greetings.length);
     alert(greetings[randomIndex]);
 });
-

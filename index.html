@@ -1,58 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raphael | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Study Planner</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- NAVBAR -->
-    <nav class="navbar">
-        <h2>Raphael</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills-section">Skills</a></li>
-            <li><a href="#projects-section">Projects</a></li>
-            <li><a href="#ai-section">AI</a></li>
-        </ul>
-        <button id="dark-toggle">🌙</button>
-    </nav>
+  <header>
+    <h1><span id="typing"></span><span class="cursor">|</span></h1>
+    <p>Computer Science Student | AI & Web Development</p>
+    <button id="greetBtn">Click Me for Greeting</button>
+    <p id="greeting"></p>
+  </header>
 
-    <!-- HOME -->
-    <header id="home">
-        <h1 id="typing"></h1>
-    </header>
+  <section>
+    <h2>Skills</h2>
+    <ul id="skillsList"></ul>
+  </section>
 
-    <section class="center">
-        <button id="btn">Click Me for Greeting</button>
-    </section>
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">AI Study Planner</div>
+      <div class="card">Personal Portfolio</div>
+    </div>
+  </section>
 
-    <!-- SKILLS -->
-    <section id="skills-section">
-        <h2>Skills</h2>
-        <ul id="skills"></ul>
-    </section>
+  <section>
+    <h2>AI Skill Recommender</h2>
+    <label>
+      <input type="checkbox" id="beginner">
+      Beginner
+    </label>
+    <br><br>
+    <button id="recommendBtn">Get Recommendation</button>
+    <p id="recommendation"></p>
+  </section>
 
-    <!-- PROJECTS -->
-    <section id="projects-section">
-        <h2>Projects</h2>
-        <div id="projects" class="projects-grid"></div>
-    </section>
-
-    <!-- AI RECOMMENDER -->
-    <section id="ai-section">
-        <h2>AI Skill Recommender</h2>
-        <select id="skill-level">
-            <option value="Beginner">Beginner</option>
-            <option value="Intermediate">Intermediate</option>
-            <option value="Advanced">Advanced</option>
-        </select>
-        <button id="recommend-btn">Get Recommendation</button>
-        <p id="recommendation"></p>
-    </section>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

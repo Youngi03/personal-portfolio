@@ -62,3 +62,47 @@ button:hover {
     color: #222;
     margin-top: 10px;
 }
+#typing {
+    border-right: 2px solid #007acc;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    50% { border-color: transparent; }
+}
+.project-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+button {
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+/* ===== Mobile Responsive ===== */
+@media (max-width: 600px) {
+    body {
+        margin: 20px; /* less margin on small screens */
+    }
+
+    .project-card {
+        padding: 10px; /* smaller padding */
+    }
+
+    button {
+        width: 100%; /* buttons fill screen width */
+        margin-top: 5px;
+    }
+
+    #typing {
+        font-size: 1.2em; /* smaller typing intro on phones */
+    }
+}

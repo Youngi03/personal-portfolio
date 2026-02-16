@@ -1,6 +1,6 @@
 /* ===== General Styles ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0 20px;
     background: #f4f4f4;
@@ -14,8 +14,13 @@ header {
 
 h1 {
     font-size: 2rem;
-    color: #0077cc;
+    background: linear-gradient(90deg, #0077cc, #00cc99);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     min-height: 40px;
+    overflow: hidden;
+    border-right: 2px solid #0077cc; /* cursor effect */
+    white-space: nowrap;
 }
 
 /* ===== Center Sections ===== */
@@ -26,16 +31,18 @@ h1 {
 
 button {
     padding: 10px 20px;
-    background: #0077cc;
+    background: linear-gradient(90deg, #0077cc, #00cc99);
     color: #fff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: 0.3s all;
 }
 
 button:hover {
-    background: #005fa3;
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 /* ===== Skills ===== */
@@ -48,11 +55,29 @@ button:hover {
     justify-content: center;
 }
 
-#skills li {
-    background: #0077cc;
+.skill-item {
+    width: 150px;
+    background: #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.skill-bar {
+    height: 20px;
+    width: 0%;
+    background: linear-gradient(90deg, #0077cc, #00cc99);
+    border-radius: 8px;
+    transition: width 1.5s ease-in-out;
+}
+
+.skill-name {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 12px;
     color: #fff;
-    padding: 8px 12px;
-    border-radius: 5px;
+    line-height: 20px;
 }
 
 /* ===== Projects ===== */

@@ -28,15 +28,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // ===== Dynamic Skills Section =====
-    const skills = ["C Programming","Python (Learning)","JavaScript (Learning)","AI & Machine Learning Basics"];
+    // ===== Dynamic Skills with Animated Bars =====
+    const skills = [
+        {name:"C Programming", level:90},
+        {name:"Python (Learning)", level:60},
+        {name:"JavaScript (Learning)", level:50},
+        {name:"AI & Machine Learning Basics", level:70}
+    ];
     const skillsList = document.getElementById("skills");
     if(skillsList){
         skillsList.innerHTML = "";
         skills.forEach(skill => {
             const li = document.createElement("li");
-            li.textContent = skill;
+            li.className = "skill-item";
+
+            const bar = document.createElement("div");
+            bar.className = "skill-bar";
+
+            const label = document.createElement("span");
+            label.className = "skill-name";
+            label.textContent = skill.name;
+
+            li.appendChild(bar);
+            li.appendChild(label);
             skillsList.appendChild(li);
+
+            // Animate width
+            setTimeout(() => {
+                bar.style.width = skill.level + "%";
+            }, 100);
         });
     }
 

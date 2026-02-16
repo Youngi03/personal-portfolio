@@ -1,53 +1,36 @@
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
-    background-color: #f4f4f4;
-}
-
-h1 {
-    color: #333;
-}
-
-button {
-    padding: 10px 15px;
-    background-color: #007acc;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 40px;
-    background-color: #e0f7fa;
-    color: #333;
-}
-
-
-h1 {
-    color: #006064;
-}
-
-button {
-    padding: 12px 20px;
-    background-color: #00838f;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #006064;
-}
-body {
-    font-family: Arial, sans-serif;
-    margin: 40px;
     background-color: #f4f6f8;
 }
 
 h1, h2 {
     color: #222;
+}
+
+#typing-container {
+    margin-bottom: 20px;
+}
+
+#typing {
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.8em;
+    min-height: 40px;
+}
+
+button {
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #007acc;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005f99;
 }
 
 .project-card {
@@ -67,16 +50,7 @@ h1, h2 {
     color: #555;
 }
 
-#typing-container {
-    margin-bottom: 20px;
-}
-
-#typing {
-    color: #007acc;
-    font-weight: bold;
-    font-size: 1.8em;
-    min-height: 40px;
-}
+/* AI Skill Recommender Styling */
 .project-card select, .project-card button {
     padding: 5px 10px;
     margin-top: 5px;

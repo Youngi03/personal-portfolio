@@ -1,25 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-   // Typing Intro
-const typingText = "Hi, I'm Raphael — AI & Web enthusiast, building dynamic apps and portfolios!";
-const typingElement = document.getElementById("typing");
-let index = 0;
+    // ===== Typing Intro =====
+    const typingText = "Hi, I'm Raphael — AI & Web enthusiast, building dynamic apps and portfolios!";
+    const typingElement = document.getElementById("typing");
+    let index = 0;
 
-function typeEffect() {
-    if (index < typingText.length) {
-        typingElement.textContent += typingText.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100); // 100ms per letter
+    function typeEffect() {
+        if (index < typingText.length) {
+            typingElement.textContent += typingText.charAt(index);
+            index++;
+            setTimeout(typeEffect, 100); // typing speed
+        }
     }
-}
 
-typeEffect();
+    typeEffect();
 
-}
-
-typeEffect();
-
-    // ===== Dynamic Greeting =====
+    // ===== Dynamic Greeting Button =====
     const greetings = [
         "Hello, I'm Raphael — aspiring software engineer and AI enthusiast!",
         "Welcome! I enjoy building web and mobile apps with AI tools.",
@@ -33,7 +29,7 @@ typeEffect();
         alert(greetings[randomIndex]);
     });
 
-    // ===== Skills Section =====
+    // ===== Skills List =====
     const skills = [
         "C (Strong)",
         "Python (Beginner)",
@@ -51,7 +47,7 @@ typeEffect();
         skillsList.appendChild(li);
     });
 
-    // ===== Projects Section =====
+    // ===== Project Cards =====
     const projects = [
         {
             title: "AI Student Assistant",

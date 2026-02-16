@@ -40,13 +40,6 @@ button {
 button:hover {
     background-color: #006064;
 }
-/* Your existing CSS might look like this */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-}
-
-/* PASTE THIS BELOW EVERYTHING ELSE */
 body {
     font-family: Arial, sans-serif;
     margin: 40px;
@@ -73,6 +66,7 @@ h1, h2 {
 .project-card small {
     color: #555;
 }
+
 #typing-container {
     margin-bottom: 20px;
 }
@@ -83,15 +77,3 @@ h1, h2 {
     font-size: 1.8em;
     min-height: 40px;
 }
-#typing-container {
-    margin-bottom: 20px;
-}
-
-#typing {
-    color: #007acc;
-    font-weight: bold;
-    font-size: 1.8em;
-    min-height: 40px; /* prevents layout shift while typing */
-}
-
-

@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
         projectsDiv.appendChild(card);
     });
 
-    // ===== AI Skill Recommender Button =====
+    // ===== AI Skill Recommender =====
     document.getElementById("recommend-btn").addEventListener("click", function() {
         const level = document.getElementById("skill-level").value;
         let recommendation = "";
@@ -93,6 +93,25 @@ document.addEventListener("DOMContentLoaded", function () {
         else if(level === "Advanced") recommendation = "Explore AI models and machine learning projects.";
 
         document.getElementById("recommendation").textContent = recommendation;
+    });
+
+    // ===== AI Skill Pathfinder =====
+    document.getElementById("suggest-skill-btn").addEventListener("click", function() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        const selected = Array.from(checkboxes).map(cb => cb.value);
+        let suggestion = "";
+
+        if(selected.includes("Python") && !selected.includes("AI Basics")){
+            suggestion = "Try learning AI Basics next!";
+        } else if(selected.includes("JavaScript") && !selected.includes("Web Apps")){
+            suggestion = "Build small web apps to practice JavaScript.";
+        } else if(selected.length === 0){
+            suggestion = "Select at least one skill!";
+        } else {
+            suggestion = "Explore advanced topics or combine multiple skills!";
+        }
+
+        document.getElementById("suggestion").textContent = suggestion;
     });
 
 });

@@ -102,7 +102,14 @@ document.addEventListener("DOMContentLoaded", function () {
             if(level === "Beginner") recommendation = "Learn Python basics and try small projects.";
             else if(level === "Intermediate") recommendation = "Build simple web apps using JavaScript.";
             else if(level === "Advanced") recommendation = "Explore AI models and machine learning projects.";
-            recommendationEl.textContent = recommendation;
+
+            // Animate text appearance
+            recommendationEl.textContent = "";
+            recommendationEl.classList.remove("show");
+            setTimeout(() => {
+                recommendationEl.textContent = recommendation;
+                recommendationEl.classList.add("show");
+            }, 100);
         });
     }
 

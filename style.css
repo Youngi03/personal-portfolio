@@ -83,5 +83,15 @@ h1, h2 {
     font-size: 1.8em;
     min-height: 40px;
 }
+#typing-container {
+    margin-bottom: 20px;
+}
+
+#typing {
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.8em;
+    min-height: 40px; /* prevents layout shift while typing */
+}
 
 

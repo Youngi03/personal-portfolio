@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // ===== Typing Effect Intro =====
+   // Typing Intro
 const typingText = "Hi, I'm Raphael — AI & Web enthusiast, building dynamic apps and portfolios!";
 const typingElement = document.getElementById("typing");
 let index = 0;
@@ -9,8 +9,12 @@ function typeEffect() {
     if (index < typingText.length) {
         typingElement.textContent += typingText.charAt(index);
         index++;
-        setTimeout(typeEffect, 100); // typing speed in ms
+        setTimeout(typeEffect, 100); // 100ms per letter
     }
+}
+
+typeEffect();
+
 }
 
 typeEffect();

@@ -73,5 +73,15 @@ h1, h2 {
 .project-card small {
     color: #555;
 }
+#typing-container {
+    margin-bottom: 20px;
+}
+
+#typing {
+    color: #007acc;
+    font-weight: bold;
+    font-size: 1.8em;
+    min-height: 40px;
+}
 
 

@@ -1,5 +1,20 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // ===== Typing Effect Intro =====
+const typingText = "Hi, I'm Raphael — AI & Web enthusiast, building dynamic apps and portfolios!";
+const typingElement = document.getElementById("typing");
+let index = 0;
+
+function typeEffect() {
+    if (index < typingText.length) {
+        typingElement.textContent += typingText.charAt(index);
+        index++;
+        setTimeout(typeEffect, 100); // typing speed in ms
+    }
+}
+
+typeEffect();
+
     // ===== Dynamic Greeting =====
     const greetings = [
         "Hello, I'm Raphael — aspiring software engineer and AI enthusiast!",

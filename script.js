@@ -64,21 +64,51 @@ skills.forEach(skill => {
       tech: "JavaScript"
     }
   ];
-  const projectsDiv = document.getElementById("projects");
-  projects.forEach(project => {
+ // ===== Dynamic Projects Section =====
+const projects = [
+    {
+        title: "AI Student Assistant",
+        description: "A smart assistant that helps students with study planning using AI concepts.",
+        tech: "Python, Machine Learning"
+    },
+    {
+        title: "Personal Portfolio Website",
+        description: "A dynamic portfolio website deployed using GitHub Pages.",
+        tech: "HTML, CSS, JavaScript"
+    },
+    {
+        title: "Smart Task Manager",
+        description: "A task manager that prioritizes tasks using simple AI logic.",
+        tech: "JavaScript"
+    }
+];
+
+const projectsDiv = document.getElementById("projects");
+
+// Clear existing project cards (in case of update)
+projectsDiv.innerHTML = "";
+
+// Render each project dynamically
+projects.forEach(project => {
     const card = document.createElement("div");
     card.className = "project-card";
+
     const title = document.createElement("h3");
     title.textContent = project.title;
+
     const desc = document.createElement("p");
     desc.textContent = project.description;
+
     const tech = document.createElement("small");
     tech.textContent = "Tech: " + project.tech;
+
     card.appendChild(title);
     card.appendChild(desc);
     card.appendChild(tech);
+
     projectsDiv.appendChild(card);
-  });
+});
+
 
   // AI Skill Recommender
   document.getElementById("recommend-btn").addEventListener("click", function() {

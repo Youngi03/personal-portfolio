@@ -26,19 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
     alert(greetings[randomIndex]);
   });
 
-  // Skills List
-  const skills = [
+  // ===== Dynamic Skills Section =====
+const skills = [
     "C Programming",
     "Python (Learning)",
     "JavaScript (Learning)",
     "AI & Machine Learning Basics"
-  ];
-  const skillsList = document.getElementById("skills");
-  skills.forEach(skill => {
+];
+
+const skillsList = document.getElementById("skills");
+
+// Clear any existing skills (useful if updating dynamically later)
+skillsList.innerHTML = "";
+
+// Add skills dynamically
+skills.forEach(skill => {
     const li = document.createElement("li");
     li.textContent = skill;
     skillsList.appendChild(li);
-  });
+});
 
   // Project Cards
   const projects = [

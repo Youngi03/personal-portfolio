@@ -3,35 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raphael's Portfolio</title>
+    <title>Raphael | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Typing Intro -->
-    <header>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <h2>Raphael</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills-section">Skills</a></li>
+            <li><a href="#projects-section">Projects</a></li>
+            <li><a href="#ai-section">AI</a></li>
+        </ul>
+        <button id="dark-toggle">🌙</button>
+    </nav>
+
+    <!-- HOME -->
+    <header id="home">
         <h1 id="typing"></h1>
     </header>
 
-    <!-- Greeting Button -->
     <section class="center">
         <button id="btn">Click Me for Greeting</button>
     </section>
 
-    <!-- Skills Section -->
-    <section>
+    <!-- SKILLS -->
+    <section id="skills-section">
         <h2>Skills</h2>
         <ul id="skills"></ul>
     </section>
 
-    <!-- Projects Section -->
-    <section>
+    <!-- PROJECTS -->
+    <section id="projects-section">
         <h2>Projects</h2>
         <div id="projects" class="projects-grid"></div>
     </section>
 
-    <!-- AI Skill Recommender -->
-    <section>
+    <!-- AI RECOMMENDER -->
+    <section id="ai-section">
         <h2>AI Skill Recommender</h2>
         <select id="skill-level">
             <option value="Beginner">Beginner</option>

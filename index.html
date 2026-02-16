@@ -1,43 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raphael Kiplagat Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Typing Intro -->
-  <div id="typing-container">
-    <h1 id="typing"></h1>
-  </div>
-  <p>Computer Science student | AI & Web Dev</p>
+    <!-- Typing Intro -->
+    <header>
+        <h1 id="typing"></h1>
+    </header>
 
-  <!-- Dynamic Greeting Button -->
-  <button id="btn">Click Me</button>
+    <!-- Greeting Button -->
+    <section>
+        <button id="btn">Click Me for Greeting</button>
+    </section>
 
-  <!-- Skills Section -->
-  <h2>My Skills</h2>
-  <ul id="skills"></ul>
+    <!-- Skills Section -->
+    <section>
+        <h2>Skills</h2>
+        <ul id="skills"></ul>
+    </section>
 
-  <!-- Projects Section -->
-  <h2>Projects</h2>
-  <div id="projects"></div>
+    <!-- Projects Section -->
+    <section>
+        <h2>Projects</h2>
+        <div id="projects"></div>
+    </section>
 
-  <!-- Interactive AI Skill Recommender -->
-  <div class="project-card">
-    <h3>AI Skill Recommender</h3>
-    <p>Select your skill level and get a recommended next skill:</p>
-    <select id="skill-level">
-      <option value="Beginner">Beginner</option>
-      <option value="Intermediate">Intermediate</option>
-      <option value="Advanced">Advanced</option>
-    </select>
-    <button id="recommend-btn">Get Recommendation</button>
-    <p id="recommendation"></p>
-  </div>
+    <!-- AI Skill Recommender -->
+    <section>
+        <h2>AI Skill Recommender</h2>
+        <select id="skill-level">
+            <option value="Beginner">Beginner</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Advanced">Advanced</option>
+        </select>
+        <button id="recommend-btn">Get Recommendation</button>
+        <p id="recommendation"></p>
+    </section>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

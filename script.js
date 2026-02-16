@@ -73,5 +73,16 @@ document.addEventListener("DOMContentLoaded", function () {
         card.appendChild(tech);
         projectsDiv.appendChild(card);
     });
+    document.getElementById("recommend-btn").addEventListener("click", function() {
+    const level = document.getElementById("skill-level").value;
+    let recommendation = "";
+
+    if(level === "Beginner") recommendation = "Learn Python basics and simple projects.";
+    else if(level === "Intermediate") recommendation = "Try building small web apps with JavaScript.";
+    else if(level === "Advanced") recommendation = "Explore AI models and machine learning projects.";
+
+    document.getElementById("recommendation").textContent = recommendation;
+});
+
 
 });

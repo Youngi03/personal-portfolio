@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    // ===== Dynamic Greeting =====
     const greetings = [
         "Hello, I'm Raphael — aspiring software engineer and AI enthusiast!",
         "Welcome! I enjoy building web and mobile apps with AI tools.",
@@ -7,56 +9,67 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     const btn = document.getElementById("btn");
-
-    if (!btn) {
-        console.log("Button not found");
-        return;
-    }
-
     btn.addEventListener("click", function () {
         const randomIndex = Math.floor(Math.random() * greetings.length);
         alert(greetings[randomIndex]);
     });
-});
-// Projects data
-const projects = [
-    {
-        title: "AI Student Assistant",
-        description: "A smart assistant that helps students with study planning and questions using AI concepts.",
-        tech: "Python, Machine Learning"
-    },
-    {
-        title: "Personal Portfolio Website",
-        description: "A responsive personal portfolio showcasing my skills, projects, and AI interests.",
-        tech: "HTML, CSS, JavaScript"
-    },
-    {
-        title: "Smart Task Manager",
-        description: "A task manager that prioritizes tasks based on deadlines and simple AI logic.",
-        tech: "JavaScript"
-    }
-];
 
-// Get projects container
-const projectsDiv = document.getElementById("projects");
+    // ===== Skills Section =====
+    const skills = [
+        "C (Strong)",
+        "Python (Beginner)",
+        "JavaScript (Beginner)",
+        "Data Structures & Algorithms",
+        "Machine Learning & AI",
+        "Git & GitHub",
+        "Web & App Development"
+    ];
 
-// Create project cards dynamically
-projects.forEach(project => {
-    const card = document.createElement("div");
-    card.className = "project-card";
+    const skillsList = document.getElementById("skills");
+    skills.forEach(skill => {
+        const li = document.createElement("li");
+        li.textContent = skill;
+        skillsList.appendChild(li);
+    });
 
-    const title = document.createElement("h3");
-    title.textContent = project.title;
+    // ===== Projects Section =====
+    const projects = [
+        {
+            title: "AI Student Assistant",
+            description: "A smart assistant that helps students with study planning using AI concepts.",
+            tech: "Python, Machine Learning"
+        },
+        {
+            title: "Personal Portfolio Website",
+            description: "A dynamic portfolio website deployed using GitHub Pages.",
+            tech: "HTML, CSS, JavaScript"
+        },
+        {
+            title: "Smart Task Manager",
+            description: "A task manager that prioritizes tasks using simple AI logic.",
+            tech: "JavaScript"
+        }
+    ];
 
-    const desc = document.createElement("p");
-    desc.textContent = project.description;
+    const projectsDiv = document.getElementById("projects");
+    projects.forEach(project => {
+        const card = document.createElement("div");
+        card.className = "project-card";
 
-    const tech = document.createElement("small");
-    tech.textContent = "Tech: " + project.tech;
+        const title = document.createElement("h3");
+        title.textContent = project.title;
 
-    card.appendChild(title);
-    card.appendChild(desc);
-    card.appendChild(tech);
+        const desc = document.createElement("p");
+        desc.textContent = project.description;
 
-    projectsDiv.appendChild(card);
+        const tech = document.createElement("small");
+        tech.textContent = "Tech: " + project.tech;
+
+        card.appendChild(title);
+        card.appendChild(desc);
+        card.appendChild(tech);
+
+        projectsDiv.appendChild(card);
+    });
+
 });
